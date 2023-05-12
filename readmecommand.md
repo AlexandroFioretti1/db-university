@@ -17,7 +17,7 @@
 - SELECT `cfu` FROM `courses` WHERE `cfu`>10;
 - SELECT `cfu` FROM `courses` WHERE `cfu`>10;
     response = 479 
-##
+###
 -3 Consegna: Selezionare tutti gli studenti che hanno più di 30 anni
 
 - SHOW `databases`
@@ -26,4 +26,25 @@
 - SELECT * FROM `students`
  WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) >30;
  response = 3392 students >30
-###
+####
+
+-4 Consegna: Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
+laurea (286)
+
+- SHOW `databases`
+- USE `91_university`
+- SHOW `tables`
+- SELECT * FROM `students`
+- SELECT * FROM courses 
+WHERE period ='I semestre' and YEAR = 1;
+    resault = 286
+#####
+-4 Consegna:Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
+20/06/2020 (21)
+
+- SHOW `databases`
+- USE `91_university`
+- SHOW `tables`
+
+
+######
