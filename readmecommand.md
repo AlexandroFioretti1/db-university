@@ -7,7 +7,7 @@
 - SHOW `students`
 - SELECT * from students
  WHERE YEAR(date_of_birth) = 1990;
-       response = 160 students
+    response = 160 students
 ##
 -2 Consegna: Selezionare tutti i corsi che valgono più di 10 crediti (479)
 
@@ -25,7 +25,7 @@
 - SHOW `tables`
 - SELECT * FROM `students`
  WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE()) >30;
- response = 3392 students >30
+    response = 3392 students >30
 ####
 
 -4 Consegna: Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di
@@ -34,17 +34,24 @@ laurea (286)
 - SHOW `databases`
 - USE `91_university`
 - SHOW `tables`
-- SELECT * FROM `students`
 - SELECT * FROM courses 
 WHERE period ='I semestre' and YEAR = 1;
     resault = 286
 #####
--4 Consegna:Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
+-5 Consegna:Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del
 20/06/2020 (21)
 
 - SHOW `databases`
 - USE `91_university`
-- SHOW `tables`
-
-
+- SELECT * FROM exams
+WHERE DATE  ="2020-06-20" AND HOUR>= "14:00:00";  
+    resault = 21
 ######
+
+-6 Consegna:Selezionare tutti i corsi di laurea magistrale (38)
+
+- SHOW `databases`
+- USE `91_university`
+- SELECT * FROM degrees 
+WHERE level ="magistrale";
+    resault= 38
