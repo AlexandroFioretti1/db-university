@@ -3,6 +3,10 @@
 ##
 
 1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+SELECT `students`.`name`, `surname`
+FROM `students`
+JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = 'Corso di laurea in economia' ;
 
 ##
 
@@ -27,7 +31,6 @@
 
 ##
 
-7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per
-   superare ciascuno dei suoi esami.
+7. BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami.
 
 #####
